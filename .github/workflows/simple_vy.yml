@@ -17,7 +17,7 @@ jobs:
         docker build -t vyos/vyos-build:equuleus docker
     - name: Build iso
       run: |
-        docker run --rm --privileged -v $(pwd)/vyos-build:/vyos -w /vyos vyos/vyos-build:equuleus bash -c './configure --architecture amd64 --build-type release --build-by "test@test.local --version 1.3.7-20240523" && sudo make iso'
+        docker run --rm --privileged -v $(pwd)/vyos-build:/vyos -w /vyos vyos/vyos-build:equuleus bash -c './configure --architecture amd64 --build-type release --version 1.3.7-20240523 && sudo make iso'
     - name: Persist created iso
       uses: actions/upload-artifact@v1
       with:
