@@ -1,7 +1,7 @@
 name: Build Simple VyOS LTS
 
-on:
-  push:
+#on:
+  #push:
   #schedule:
   #  - cron: '0 0 1 * *'  # Run build every month
 
