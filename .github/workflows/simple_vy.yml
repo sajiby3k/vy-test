@@ -1,10 +1,10 @@
 name: Build Simple VyOS LTS
 
-#on:
-  #push:
-  #schedule:
-  #  - cron: '0 0 1 * *'  # Run build every month
-
+on:
+  push:
+    tags:
+      - 'v1.3.*'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
