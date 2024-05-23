@@ -2,9 +2,7 @@ name: Build Simple VyOS LTS
 
 on:
   push:
-    tags:
-      - 'v1.3.*'
-      
+          
 jobs:
   build:
     runs-on: ubuntu-latest
